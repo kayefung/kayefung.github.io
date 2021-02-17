@@ -15,10 +15,16 @@ p, a {
 }
 
 #headshot {
-  float: left;
-  width: 20vw;
-  height: auto;
-  margin: 0;
+  display: none;
+}
+@media (min-width: 992px) {
+  #headshot {
+    display: inline;
+    float: left;
+    width: 20vw;
+    height: auto;
+    margin: 0;
+  }
 }
 
 #headshot img {
@@ -34,18 +40,16 @@ p, a {
 }
 
 #footer {
-  bottom: 0;
   width: 60vw;
-  height: 35vh;
-  padding: 0 2vw;
+  margin-top: 8vh;
+  padding-left: 2vw;
 }
 
 #footer h1 {
-  float: left;
-  display: inline;
   font-size: 30px;
 }
 
-#footer #links {
-  display: inline;
+#footer .col-auto a {
+  margin-left: 1vw;
+  text-decoration: none;
 }
