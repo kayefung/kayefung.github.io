@@ -1,9 +1,20 @@
+:root {
+  --bg-color: #f2f2f2;
+  --text-color: #000;
+  --accent-color: #fb9125;
+}
+
 body {
-  margin: 20vh 20vw;
+  margin: 10vh 10vw;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
   font-size: 25px;
-  background-color: #f2f2f2;
+  background-color: var(--bg-color);
+} 
+@media (min-width: 768px) {
+  body {
+    margin: 20vh 20vw;
+  }
 }
 
 h1 {
@@ -13,15 +24,15 @@ h1 {
 }
 
 a {
-  color: #000;
+  color: var(--text-color);
   text-decoration: underline;
-  text-decoration-color: #fb9125;
+  text-decoration-color: var(--accent-color);
   text-decoration-thickness: 3px;
 }
 
 /* Link hover styling based on: https://codepen.io/geoffgraham/pen/bxEVEN */
 a:hover {
-  color: #000;
+  color: var(--text-color);
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23fb9125' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
   background-position: 0 100%;
   background-size: auto 6px;
@@ -48,14 +59,11 @@ a:hover {
 }
 
 #bio {
-  width: 40vw;
-  height: auto;
   float: left;
   margin: 0;
 }
 
 #footer {
-  width: 60vw;
   margin-top: 8vh;
   padding-left: 2vw;
 }
