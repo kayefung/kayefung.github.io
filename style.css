@@ -1,5 +1,9 @@
 body {
   margin: 20vh 20vw;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  background-color: #f2f2f2;
 }
 
 h1 {
@@ -8,10 +12,21 @@ h1 {
   font-size: 38px;
 }
 
-p, a {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 300;
-  font-size: 25px;
+a {
+  color: #000;
+  text-decoration: underline;
+  text-decoration-color: #fb9125;
+  text-decoration-thickness: 3px;
+}
+
+/* Link hover styling based on: https://codepen.io/geoffgraham/pen/bxEVEN */
+a:hover {
+  color: #000;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23fb9125' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 100%;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+  text-decoration: none;
 }
 
 #headshot {
@@ -51,5 +66,4 @@ p, a {
 
 #footer .col-auto a {
   margin-left: 1vw;
-  text-decoration: none;
 }
