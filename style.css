@@ -5,22 +5,22 @@
 }
 
 body {
-  margin: 10vh 10vw;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
   font-size: 25px;
   background-color: var(--bg-color);
-} 
-@media (min-width: 768px) {
-  body {
-    margin: 20vh 20vw;
-  }
 }
 
 h1 {
   font-family: 'Playfair Display', Serif;
   font-weight: 900;
   font-size: 38px;
+}
+
+h2 {
+  font-family: 'Playfair Display', Serif;
+  font-weight: 900;
+  font-size: 30px;
 }
 
 a {
@@ -38,6 +38,15 @@ a:hover {
   background-size: auto 6px;
   background-repeat: repeat-x;
   text-decoration: none;
+}
+
+#content {
+  margin: 8vh 10vw 0vh;
+}
+@media (min-width: 768px) {
+  #content {
+    margin: 17vh 20vw 0vh;
+  }
 }
 
 #headshot {
@@ -64,14 +73,26 @@ a:hover {
 }
 
 #footer {
-  margin-top: 8vh;
-  padding-left: 2vw;
+  margin: 8vh 10vw;
+}
+@media (min-width: 768px) {
+  #footer {
+    margin: 8vh 20vw;
+    padding-left: 2vw;
+  }
 }
 
-#footer h1 {
-  font-size: 30px;
+/* TODO this shit don't work, tryna make the links in footer display as blocks instead of inline on mobile */
+@media (max-width: 768px) {
+  #footer .col-auto {
+    clear: both;
+    display: block;
+    /* float: left; */
+  }
 }
 
-#footer .col-auto a {
-  margin-left: 1vw;
+@media (min-width: 768px) {
+  #footer .col-auto a {
+    margin-left: 1vw;
+  }
 }
